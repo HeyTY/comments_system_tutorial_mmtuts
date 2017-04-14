@@ -4,8 +4,8 @@ body {
 
 textarea {
     background-color: #fff;
-    width: 850px;
-    height: 80px;
+    width: 553px;
+    height: 60px;
     resize: none;
 
 }
@@ -28,7 +28,7 @@ button {
     -webkit-border-radius:;
     -moz-border-radius:;
     border-radius:5px;
-    width: 810px;
+    width: 500px;
     padding: 25px;
     margin-bottom: 10px;
     position: relative;
@@ -81,4 +81,10 @@ button {
 .delete-form button:hover {
     opacity: 1;
 
+}
+
+.commentReplyMessage {
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }

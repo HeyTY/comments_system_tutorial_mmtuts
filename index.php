@@ -38,21 +38,28 @@ if (isset($_SESSION['id'])) {
 
 <br><br>
 
-<iframe width="854" height="480"
-  src="https://www.youtube.com/embed/h--P8HzYZ74" frameborder="0" allowfullscreen>
+<iframe width="560" height="315"
+    src="https://www.youtube.com/embed/bM7SZ5SBzyY?list=RDbM7SZ5SBzyY" frameborder="0" allowfullscreen>
 </iframe>
 
+
   <?php
+  if (isset($_SESSION['id'])) {
     echo "<form method='POST' action='".setComments($conn)."'>
-      <input type='hidden' name='uid' value='Anonymous'>
+      <input type='hidden' name='uid' value='".$_SESSION['id']."''>
       <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
       <textarea class='text1' name='message'></textarea>
       <div>
         <button type='submit' name='commentSubmit'>Add Comment</button>
       </div>
     </form>";
+  } else {
+    echo "<form >
+      <textarea class='text1' name='message' placeholder='You need to be logged in to comment!'></textarea>
+    </form><br><br><br>";
+  }
+  getComments($conn);
 
-    getComments($conn);
   ?>
 </body>
 </html>
