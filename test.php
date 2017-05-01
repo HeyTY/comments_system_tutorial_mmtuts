@@ -5,3 +5,8 @@ function test () {
 }
 
 test();
+
+//Create a demo branch in phpstorm
+function demo () {
+  echo 'Hello, this is the demo function';
+}
